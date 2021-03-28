@@ -2,6 +2,20 @@
 
 You can test your notification configuration by running `npm run test:notification`.
 
+## Apple Push Notification Service 
+
+| Environment variable | Description |
+|---|---|
+| `APNS_AUTHKEY` | Path to authkey on users machine |
+| `APNS_BUNDLEID` | iOS app bundle id |
+| `APNS_DEVICETOKEN` | iOS device token|
+| `APNS_KEYID` | Apple developer's key id |
+| `APNS_PRODUCTION` | true/false for production |
+| `APNS_TEAMID` | Apple developer's team id |
+
+Change your notification alert/payload/etc in apns.ts in the note object. 
+Refer to https://github.com/node-apn/node-apn for config options.
+
 ## Desktop
 
 | Environment variable | Description |
@@ -18,6 +32,7 @@ You can test your notification configuration by running `npm run test:notificati
 | Environment variable | Description |
 |:---:|---|
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify |
+| `DISCORD_NOTIFY_GROUP_3060` | Discord group to notify on 3060 stock |
 | `DISCORD_NOTIFY_GROUP_3060TI` | Discord group to notify on 3060 Ti stock |
 | `DISCORD_NOTIFY_GROUP_3070` | Discord group to notify on 3070 stock |
 | `DISCORD_NOTIFY_GROUP_3080` | Discord group to notify on 3080 stock |
@@ -139,6 +154,7 @@ Generate token at [pushover.net/apps/build](https://pushover.net/apps/build).
 | `PUSHOVER_PRIORITY` | Message priority |
 | `PUSHOVER_TOKEN` | API token |
 | `PUSHOVER_USER` | Username |
+| `PUSHOVER_SOUND` | Message sound |
 
 ???+ note
     `PUSHOVER_EXPIRE` and `PUSHOVER_RETRY` are only used when `PUSHOVER_PRIORITY="2"`
